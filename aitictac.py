@@ -20,6 +20,7 @@ def game():
             move = playai(vals,g)
             print("Ai played to place " + move)
 
+
         if g[move] == ' ':
             g[move] = turn
             vals[str(move)] = val
@@ -84,6 +85,7 @@ def game():
             status=True
             print("\nGame Over.\n")
             print("It's a Tie!!")
+
         # Change
         if turn == 'X':
             turn = 'O'

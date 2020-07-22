@@ -36,8 +36,23 @@ def ai(vals):
         m = range(1,9)
         return random.choice(m)
 
-    elif v['5']==3 or v['5']== 5:
+    else:
         corners=[1,3,7,9]
-        return random.choice(corners)
+        if v['5']== 5:
+            #need improvements
+            if v['1']==3 or v['9']==3:
+                if v['1']==3:
+                    if a[6]==3:
+                        corners=[3]
+                    elif a[3]==3:
+                        corners=[7]
+                elif v['9']==3:
+                    if v['4']==3:
+                        corners=[7]
+                    elif v['2']==3:
+                        corners=[3]
 
+                else:
+                    corners=[1,9]
+        return random.choice(corners)
 
